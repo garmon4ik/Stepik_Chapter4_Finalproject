@@ -24,3 +24,6 @@ class LoginPage(BasePage):
         self.browser.find_element(*LoginPageLocators.REGA_PASS1).send_keys(password)
         self.browser.find_element(*LoginPageLocators.REGA_PASS2).send_keys(password)
         self.browser.find_element(*LoginPageLocators.REGA_BUTTON).click()
+
+    def go_to_login_page(self):
+        self.browser.find_element(*LoginPageLocators.LOGIN_LINK).click()
